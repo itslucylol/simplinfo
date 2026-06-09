@@ -9,8 +9,13 @@ Shell="$(basename "$SHELL")"
 CPU="$(lscpu | grep 'Model name' | sed 's/.*: *//')"
 GPU="$(glxinfo -B | awk -F': ' '/Device:/ {print $2; exit}')"
 RAM="$(free -h | awk '/^Mem:/ {print $3 "/" $2}')"
-Best_anime="Ganbare Nakamura-kun!!"
 current_year="$(date +%Y)"
+
+if [ -s "$HOME/.bestanime" ]; then
+    Best_anime="$(cat "$HOME/.bestanime")"
+else
+    Best_anime="Ganbare Nakamura-kun!!"
+fi
 
 # COLORS
 c1="\e[31m" # Red
