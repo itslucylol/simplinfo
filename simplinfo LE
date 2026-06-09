@@ -71,5 +71,5 @@ echo -e "${c5}     RAM:${c20} ${RAM}"
 echo -e "${c8}     The Best Anime:${c21} ${Best_anime}"
 echo
 echo
-echo -e "${c20}     Simplinfo LE version 1.2        2026-${current_year}"
+echo -e "${c20}     Simplinfo LE version 1.3        2026-${current_year}"
 echo ""
