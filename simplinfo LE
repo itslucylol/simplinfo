@@ -15,7 +15,7 @@ else
 fi
 OS="$(uname -sr)"
 if [ -n "$XDG_CURRENT_DESKTOP" ]; then
-    DE="$(XDG_CURRENT_DESKTOP)"
+    DE="${XDG_CURRENT_DESKTOP}"
 elif command -v wmctrl >/dev/null 2>&1; then
     DE="$(wmctrl -m | awk -F': ' ' /^Name/ {print $2}')"
 else
